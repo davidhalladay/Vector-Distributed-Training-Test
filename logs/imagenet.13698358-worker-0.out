@@ -1,0 +1,60 @@
+hello from node: 0, gpu idx: None, ngpus_per_node: 2, world-size: 4
+gpu146:32360:32360 [0] NCCL INFO Bootstrap : Using bond0:172.17.8.146<0>
+gpu146:32360:32360 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gpu146:32360:32360 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gpu146:32360:32360 [0] NCCL INFO cudaDriverVersion 12000
+NCCL version 2.18.6+cuda11.8
+Use GPU: 1 for training
+=> creating model 'resnet18'
+1
+=> Dummy data is used!
+start epoch 0
+start training epoch 0
+Use GPU: 0 for training
+=> creating model 'resnet18'
+0
+=> Dummy data is used!
+start epoch 0
+start training epoch 0
+gpu146:32360:33000 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+gpu146:32360:33000 [0] NCCL INFO NET/Socket : Using [0]bond0:172.17.8.146<0>
+gpu146:32360:33000 [0] NCCL INFO Using network Socket
+gpu146:32360:33000 [0] NCCL INFO comm 0x7adecc0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 6000 commId 0x1bba34382bd1f362 - Init START
+gpu146:32360:33000 [0] NCCL INFO Setting affinity for GPU 0 to 100001
+gpu146:32360:33000 [0] NCCL INFO Channel 00/02 :    0   1   2   3
+gpu146:32360:33000 [0] NCCL INFO Channel 01/02 :    0   1   2   3
+gpu146:32360:33000 [0] NCCL INFO Trees [0] 1/2/-1->0->-1 [1] 1/-1/-1->0->2
+gpu146:32360:33000 [0] NCCL INFO P2P Chunksize set to 131072
+gpu146:32360:33000 [0] NCCL INFO Channel 00/0 : 3[1] -> 0[0] [receive] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Channel 01/0 : 3[1] -> 0[0] [receive] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+gpu146:32360:33000 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+gpu146:32360:33000 [0] NCCL INFO Connected all rings
+gpu146:32360:33000 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [receive] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Channel 01/0 : 2[0] -> 0[0] [receive] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Channel 00/0 : 0[0] -> 2[0] [send] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[0] [send] via NET/Socket/0
+gpu146:32360:33000 [0] NCCL INFO Connected all trees
+gpu146:32360:33000 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpu146:32360:33000 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+gpu146:32360:33000 [0] NCCL INFO comm 0x7adecc0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 6000 commId 0x1bba34382bd1f362 - Init COMPLETE
+gpu146:32361:32361 [1] NCCL INFO cudaDriverVersion 12000
+gpu146:32361:32361 [1] NCCL INFO Bootstrap : Using bond0:172.17.8.146<0>
+gpu146:32361:32361 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gpu146:32361:32361 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gpu146:32361:32998 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+gpu146:32361:32998 [1] NCCL INFO NET/Socket : Using [0]bond0:172.17.8.146<0>
+gpu146:32361:32998 [1] NCCL INFO Using network Socket
+gpu146:32361:32998 [1] NCCL INFO comm 0x6d27260 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 2f000 commId 0x1bba34382bd1f362 - Init START
+gpu146:32361:32998 [1] NCCL INFO Setting affinity for GPU 1 to 100001
+gpu146:32361:32998 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+gpu146:32361:32998 [1] NCCL INFO P2P Chunksize set to 131072
+gpu146:32361:32998 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[0] [send] via NET/Socket/0
+gpu146:32361:32998 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[0] [send] via NET/Socket/0
+gpu146:32361:32998 [1] NCCL INFO Connected all rings
+gpu146:32361:32998 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+gpu146:32361:32998 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+gpu146:32361:32998 [1] NCCL INFO Connected all trees
+gpu146:32361:32998 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpu146:32361:32998 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+gpu146:32361:32998 [1] NCCL INFO comm 0x6d27260 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 2f000 commId 0x1bba34382bd1f362 - Init COMPLETE

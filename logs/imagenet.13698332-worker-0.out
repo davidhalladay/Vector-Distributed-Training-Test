@@ -1,0 +1,36 @@
+hello from node: 0, gpu idx: None, ngpus_per_node: 2, world-size: 4
+Use GPU: 1 for training
+=> creating model 'resnet18'
+Traceback (most recent call last):
+  File "/fs01/home/wancyuan/work/tmp/main.py", line 520, in <module>
+    main()
+  File "/fs01/home/wancyuan/work/tmp/main.py", line 121, in main
+    mp.spawn(main_worker, nprocs=ngpus_per_node, args=(ngpus_per_node, args))
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 246, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 202, in start_processes
+    while not context.join():
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 163, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 74, in _wrap
+    fn(i, *args)
+  File "/fs01/home/wancyuan/work/tmp/main.py", line 162, in main_worker
+    model.cuda(args.gpu)
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 918, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/h/wancyuan/miniconda3/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 918, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+RuntimeError: CUDA error: uncorrectable ECC error encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
